@@ -4,17 +4,17 @@ import { Card, CardContent } from '@/components/ui/card'
 import { Mariadb, Mysql, Postgresql, Sqlite } from "@dev.icons/vue";
 import { Express, Nodejs, Nuxt, Axios, Swagger, Vite, Webpack } from "@dev.icons/vue";
 import { Npm, Pnpm } from "@dev.icons/vue";
-import { Typescript, Javascript, _Vue, Html5, Css, Tailwind, FontAwesome, Markdown } from "@dev.icons/vue"
+import { Typescript, Javascript, _Vue, Html5, Css, TailwindIcon, FontAwesome, Markdown } from "@dev.icons/vue"
 import { Dotnet, Electron, Selenium } from "@dev.icons/vue"
 import { CPlusplus, CSharp, Python, Lua } from "@dev.icons/vue"
 import { Arduino, Platformio } from "@dev.icons/vue"
-import { Nginx, Docker, Cloudflare, Vercel, Certbot, Metabase, Nvm, Sentry, Webhooks } from "@dev.icons/vue"
+import { Nginx, DockerIcon, CloudflareIcon, VercelIcon, Certbot, Metabase, Nvm, SentryIcon, Webhooks } from "@dev.icons/vue"
 import { GithubActions } from "@dev.icons/vue"
-import { Gitlab, Github, GitIcon } from "@dev.icons/vue"
-import { Claude, GithubCopilot } from "@dev.icons/vue"
+import { Gitlab, GithubIcon, GitIcon } from "@dev.icons/vue"
+import { ClaudeIcon, GithubCopilot } from "@dev.icons/vue"
 import { Android } from "@dev.icons/vue"
-import { Webstorm, VisualStudio, VisualStudioCode, Sublimetext, Jetbrains, Postman } from "@dev.icons/vue"
-import { LinuxTux, Fedora, Debian, Ubuntu, Kde, MicrosoftWindows, Arm, Intel, Amd, RaspberryPi } from "@dev.icons/vue"
+import { Webstorm, VisualStudio, VisualStudioCode, SublimetextIcon, JetbrainsIcon, PostmanIcon } from "@dev.icons/vue"
+import { LinuxTux, Fedora, Debian, Ubuntu, Kde, MicrosoftWindowsIcon, Arm, Intel, Amd, RaspberryPi } from "@dev.icons/vue"
 import { Blender } from "@dev.icons/vue"
 import { AwsS3 } from "@dev.icons/vue"
 import { Curl, Terminal } from "@dev.icons/vue"
@@ -28,7 +28,7 @@ const categories = [
   },
   {
     title: "Frameworks & Runtime",
-    icons: [Nodejs, Nuxt, Express, Dotnet, Electron, Tailwind, Vite, Webpack, Axios, Swagger],
+    icons: [Nodejs, Nuxt, Express, Dotnet, Electron, TailwindIcon, Vite, Webpack, Axios, Swagger],
   },
   {
     title: "Bases de données",
@@ -36,19 +36,19 @@ const categories = [
   },
   {
     title: "DevOps & Cloud",
-    icons: [Docker, Nginx, Cloudflare, Vercel, Certbot, AwsS3, Metabase, Sentry, Nvm, Webhooks],
+    icons: [DockerIcon, Nginx, CloudflareIcon, VercelIcon, Certbot, AwsS3, Metabase, SentryIcon, Nvm, Webhooks],
   },
   {
     title: "Versionning & CI/CD",
-    icons: [GitIcon, Github, Gitlab, GithubActions],
+    icons: [GitIcon, GithubIcon, Gitlab, GithubActions],
   },
   {
     title: "Outils & IDE",
-    icons: [VisualStudioCode, VisualStudio, Webstorm, Jetbrains, Sublimetext, Postman, Npm, Pnpm, Curl, Terminal],
+    icons: [VisualStudioCode, VisualStudio, Webstorm, JetbrainsIcon, SublimetextIcon, PostmanIcon, Npm, Pnpm, Curl, Terminal],
   },
   {
     title: "Systèmes & Matériel",
-    icons: [LinuxTux, Ubuntu, Debian, Fedora, Kde, MicrosoftWindows, Arm, Intel, Amd, RaspberryPi, Android],
+    icons: [LinuxTux, Ubuntu, Debian, Fedora, Kde, MicrosoftWindowsIcon, Arm, Intel, Amd, RaspberryPi, Android],
   },
   {
     title: "Embarqué",
@@ -56,7 +56,7 @@ const categories = [
   },
   {
     title: "IA & Autres",
-    icons: [Claude, GithubCopilot, Selenium, Blender, FontAwesome, Markdown, Toml, Json, Yaml, Oauth],
+    icons: [ClaudeIcon, GithubCopilot, Selenium, Blender, FontAwesome, Markdown, Toml, Json, Yaml, Oauth],
   },
 ];
 </script>
@@ -75,12 +75,13 @@ const categories = [
             {{ category.title }}
           </h3>
           <div class="flex flex-row flex-wrap gap-6 justify-center items-center">
-            <component
-                :is="icon"
+            <div
                 v-for="(icon, index) in category.icons"
                 :key="index"
-                size="48"
-            />
+                class="flex items-center justify-center rounded-lg p-2 bg-transparent dark:bg-zinc-800 ring-black/5 dark:ring-white/10"
+            >
+              <component :is="icon" size="32" />
+            </div>
           </div>
         </div>
       </CardContent>

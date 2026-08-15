@@ -13,10 +13,10 @@ import {
 </script>
 
 <template>
-  <footer class="flex justify-evenly bottom-0 z-50 w-dvw backdrop-blur-2xl outline-1 p-5">
+  <footer class="flex flex-col md:flex-row items-center justify-evenly gap-4 bottom-0 z-50 w-dvw backdrop-blur-2xl outline-1 p-5 text-center">
     <p>Développé avec ❤️ par Ulysse2211</p>
     <p>&copy; Ulysse Gressé--Lugué {{ new Date().getFullYear() }}</p>
-    <div class="flex gap-2">
+    <div class="flex flex-wrap justify-center gap-2">
       <Button variant="outline" size="icon" class="rounded-full">
         <a target="_blank" href="https://github.com/Ulysse2211">
           <IconBrandGithub />
