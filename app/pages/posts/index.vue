@@ -12,7 +12,8 @@ useSeoMeta({
   twitterCard: 'summary_large_image',
   ogType: "article",
   ogLocale: 'fr-FR',
-  themeColor: "#0f172b"
+  themeColor: "#0f172b",
+  ogSiteName: "Page d'accueil de Ulysse.gl",
 })
 </script>
 

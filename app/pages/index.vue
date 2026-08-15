@@ -8,15 +8,16 @@ useSeoMeta({
   title: "Page d'accueil de Ulysse.gl",
   ogTitle: "Page d'accueil de Ulysse.gl",
   twitterTitle: "Page d'accueil de Ulysse.gl",
-  description: "",
-  ogDescription: "",
-  twitterDescription: "",
+  description: "Site personnel et blog d'Ulysse2211",
+  ogDescription: "Site personnel et blog d'Ulysse2211",
+  twitterDescription: "Site personnel et blog d'Ulysse2211",
   ogImage: "/ogImage.png",
   twitterImage: "/ogImage.png",
   twitterCard: 'summary_large_image',
   ogType: "website",
   ogLocale: 'fr-FR',
-  themeColor: "#0f172b"
+  themeColor: "#0f172b",
+  ogSiteName: "Page d'accueil de Ulysse.gl",
 })
 </script>
 
