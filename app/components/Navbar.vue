@@ -21,13 +21,19 @@ import {
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu'
 
-const projects = [
-  { title: 'Aucun projet public notable pour le moment', href: "", description: "" }
-]
+const projects: Array<{ title: string; description: string; href: string }> = []
 
 const isVisible = ref(true)
 const isMobileOpen = ref(false)
 let lastScrollY = 0
+
+const scrollToId = (id: string) => {
+  isMobileOpen.value = false
+  const element = document.getElementById(id)
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' })
+  }
+}
 
 const handleScroll = () => {
   const currentScrollY = window.scrollY
@@ -83,7 +89,7 @@ onUnmounted(() => {
         </NuxtLink>
         <NavigationMenuItem>
           <NavigationMenuLink as-child :class="navigationMenuTriggerStyle()">
-            <NuxtLink to="/#about" class="flex items-center gap-2" @click="isMobileOpen = false">
+            <NuxtLink to="/#about" class="flex items-center gap-2" @click="scrollToId('about')">
               <IconUser class="size-4" />
               À propos de moi
             </NuxtLink>
@@ -92,7 +98,7 @@ onUnmounted(() => {
 
         <NavigationMenuItem>
           <NavigationMenuLink as-child :class="navigationMenuTriggerStyle()">
-            <NuxtLink to="/#history" class="flex items-center gap-2" @click="isMobileOpen = false">
+            <NuxtLink to="/#history" class="flex items-center gap-2" @click="scrollToId('history')">
               <IconBriefcase class="size-4" />
               Parcours
             </NuxtLink>
@@ -101,7 +107,7 @@ onUnmounted(() => {
 
         <NavigationMenuItem>
           <NavigationMenuLink as-child :class="navigationMenuTriggerStyle()">
-            <NuxtLink to="/#hardware" class="flex items-center gap-2" @click="isMobileOpen = false">
+            <NuxtLink to="/#hardware" class="flex items-center gap-2" @click="scrollToId('hardware')">
               <IconDeviceLaptop class="size-4" />
               Matériel
             </NuxtLink>
@@ -110,7 +116,7 @@ onUnmounted(() => {
 
         <NavigationMenuItem>
           <NavigationMenuLink as-child :class="navigationMenuTriggerStyle()">
-            <NuxtLink to="/#skills" class="flex items-center gap-2" @click="isMobileOpen = false">
+            <NuxtLink to="/#skills" class="flex items-center gap-2" @click="scrollToId('skills')">
               <IconCode class="size-4" />
               Compétences
             </NuxtLink>
@@ -126,7 +132,7 @@ onUnmounted(() => {
           </NavigationMenuLink>
         </NavigationMenuItem>
 
-        <NavigationMenuItem>
+        <NavigationMenuItem v-if="projects.length > 0">
           <NavigationMenuTrigger class="flex items-center gap-2 w-full justify-between md:w-auto">
             <span class="flex items-center gap-2">
               <IconFolder class="size-4" />

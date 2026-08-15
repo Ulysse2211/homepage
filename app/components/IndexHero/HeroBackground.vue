@@ -15,7 +15,9 @@ const IMG_ARRAY = [
   "/hero-images/dc2s.svg",
   "/hero-images/a6000.png",
   "/hero-images/atten.png",
-].flatMap(item => Array(Math.floor(Math.random() * 2) + 1).fill(item));
+  "/hero-images/ricola.png",
+  "/hero-images/ch341a.png",
+]//.flatMap(item => Array(Math.floor(Math.random() * 2) + 1).fill(item));
 
 type Particle = {
   img: HTMLImageElement

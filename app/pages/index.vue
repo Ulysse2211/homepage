@@ -8,14 +8,12 @@ import Skills from "~/components/IndexContent/Skills.vue";
 <template>
   <main class="flex flex-col items-center">
     <IndexHero />
-    <div class="min-h-dvh flex flex-col items-center">
+    <div class="min-h-dvh flex flex-col items-start w-full p-5 gap-5">
+      <span id="content-start" />
       <About />
-      <Separator class="my-4" />
-      <Hardware />
-      <Separator class="my-4" />
-      <History />
-      <Separator class="my-4" />
       <Skills />
+      <History />
+      <Hardware />
     </div>
   </main>
 </template>

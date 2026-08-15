@@ -3,8 +3,7 @@ import HeroBackground from "~/components/IndexHero/HeroBackground.vue";
 import { IconChevronDown } from '@tabler/icons-vue';
 
 const scroll = () => {
-  window.scrollBy({
-    top: window.innerHeight,
+  document.getElementById('content-start')?.scrollIntoView({
     behavior: 'smooth'
   });
 };

@@ -1,11 +1,7 @@
 import tailwindcss from "@tailwindcss/vite";
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: [
-    '@nuxt/content',
-    'shadcn-nuxt',
-    '@nuxtjs/color-mode'
-  ],
+  modules: ['@nuxt/content', 'shadcn-nuxt', '@nuxtjs/color-mode', '@nuxt/ui'],
   compatibilityDate: '2025-07-15',
   css: ['~/assets/css/main.css'],
   devtools: { enabled: true },
@@ -36,4 +32,12 @@ export default defineNuxtConfig({
       ],
     },
   },
+  ui: {
+    // @ts-ignore
+    colors: {
+      primary: 'blue',
+      secondary: 'neutral',
+      neutral: 'zinc'
+    }
+  }
 })
