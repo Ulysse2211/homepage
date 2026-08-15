@@ -171,10 +171,20 @@ onUnmounted(() => {
     <div class="bg-radial-[at_50%_75%] from-indigo-950 via-slate-900 bg-slate-950 to-90% h-dvh">
       <canvas id="hero-canvas" class="w-dvw h-dvh">Hero Background Canva</canvas>
     </div>
-    <Button @click="toggleAnim()" variant="outline" size="icon" aria-label="Toggle animations" class="absolute z-40 bottom-5 right-5">
-      <IconEyeOff v-if="animEnabled" />
-      <IconEye v-else />
-    </Button>
+    <TooltipProvider>
+      <Tooltip>
+        <TooltipTrigger as-child>
+          <Button @click="toggleAnim()" variant="outline" size="icon" aria-label="Toggle animations" class="absolute z-40 bottom-5 right-5">
+            <IconEyeOff v-if="animEnabled" />
+            <IconEye v-else />
+          </Button>
+        </TooltipTrigger>
+        <TooltipContent>
+          <p v-if="animEnabled">Mettre en pause l'animation</p>
+          <p v-else>Jouer l'animation</p>
+        </TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
   </div>
 </template>
 <style scoped>
