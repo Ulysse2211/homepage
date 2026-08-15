@@ -13,7 +13,7 @@ const scroll = () => {
 <div class="flex overflow-hidden justify-center items-center">
   <HeroBackground />
   <div class="absolute z-3">
-    <div class="bg-radial from-background bg-transparent to-70% p-20 md:p-30 lg:p-40 ">
+    <div class=" ">
       <h1 class="text-4xl md:text-5xl lg:text-7xl font-black">Ulysse.GL</h1>
     </div>
   </div>
