@@ -7,7 +7,7 @@ const id = props.id
 
 <template>
   <NuxtLink :to="'/#' + id" :id="id">
-    <h2 class="text-3xl font-bold text-slate-200">{{ title }}</h2>
+    <h2 class="text-3xl font-bold text-slate-800 dark:text-slate-200">{{ title }}</h2>
     <Separator class="my-2" />
   </NuxtLink>
 </template>
