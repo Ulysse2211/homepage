@@ -170,7 +170,7 @@ onUnmounted(() => {
 <template>
   <div class="overflow-hidden">
     <span class="absolute inset-x-0 w-dvw bottom-0 z-1 h-dvh bg-linear-to-t from-background from-0% to-transparent to-45%"></span>
-    <div class="bg-radial-[at_50%_75%] from-indigo-200 via-indigo-100 bg-slate-100 dark:from-indigo-950 dark:via-slate-900 dark:bg-slate-950 to-90% h-dvh">
+    <div class="bg-radial-[at_50%_75%] bg-center bg-size-[100svh_100svh] md:bg-size-[100svw_100svw] from-indigo-200 via-indigo-100 bg-slate-100 dark:from-indigo-950 dark:via-slate-900 dark:bg-slate-950 to-90% h-dvh">
       <canvas id="hero-canvas" class="w-dvw h-dvh">Hero Background Canva</canvas>
     </div>
     <TooltipProvider>

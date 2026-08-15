@@ -37,7 +37,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="bg-radial-[at_50%_75%] from-indigo-300 via-slate-400 bg-slate-100 dark:from-indigo-950 dark:via-slate-900 dark:bg-slate-950 to-90% h-[40dvh}">
+  <div class="bg-radial-[at_50%_75%] bg-center  bg-size-[100svh_100svh] md:bg-size-[100svw_100svw] from-indigo-200 via-indigo-100 bg-slate-100 dark:from-indigo-950 dark:via-slate-900 dark:bg-slate-950 to-90% h-[40dvh}">
     <canvas id="hero-canvas" class="w-dvw h-[40dvh]">Hero Background Canva</canvas>
   </div>
 </template>
