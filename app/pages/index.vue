@@ -3,6 +3,21 @@ import About from "~/components/IndexContent/About.vue";
 import Hardware from "~/components/IndexContent/Hardware.vue";
 import History from "~/components/IndexContent/History.vue";
 import Skills from "~/components/IndexContent/Skills.vue";
+
+useSeoMeta({
+  title: "Page d'accueil de Ulysse.gl",
+  ogTitle: "Page d'accueil de Ulysse.gl",
+  twitterTitle: "Page d'accueil de Ulysse.gl",
+  description: "",
+  ogDescription: "",
+  twitterDescription: "",
+  ogImage: "/ogImage.png",
+  twitterImage: "/ogImage.png",
+  twitterCard: 'summary_large_image',
+  ogType: "website",
+  ogLocale: 'fr-FR',
+  themeColor: "#0f172b"
+})
 </script>
 
 <template>

@@ -1,5 +1,19 @@
 <script setup lang="ts">
 const { data: posts } = await useAsyncData('content', () => queryCollection('content').all())
+useSeoMeta({
+  title: "Articles de https://ulysse.gl/",
+  ogTitle: "Articles de https://ulysse.gl/",
+  twitterTitle: "Articles de https://ulysse.gl/",
+  description: "Liste des articles publiés sur https://ulysse.gl/",
+  ogDescription: "Liste des articles publiés sur https://ulysse.gl/",
+  twitterDescription: "Liste des articles publiés sur https://ulysse.gl/",
+  ogImage: "/ogImage.png",
+  twitterImage: "/ogImage.png",
+  twitterCard: 'summary_large_image',
+  ogType: "article",
+  ogLocale: 'fr-FR',
+  themeColor: "#0f172b"
+})
 </script>
 
 <template>
