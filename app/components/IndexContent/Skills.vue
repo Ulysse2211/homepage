@@ -48,11 +48,11 @@ const categories = [
   },
   {
     title: "Systèmes & Matériel",
-    icons: [LinuxTux, Ubuntu, Debian, Fedora, Kde, MicrosoftWindowsIcon, Arm, Intel, Amd, RaspberryPi, Android],
+    icons: [LinuxTux, Ubuntu, Debian, Fedora, Kde, MicrosoftWindowsIcon, Arm, Intel, Amd, Android],
   },
   {
     title: "Embarqué",
-    icons: [Arduino, Platformio],
+    icons: [Arduino, Platformio, RaspberryPi],
   },
   {
     title: "IA & Autres",
