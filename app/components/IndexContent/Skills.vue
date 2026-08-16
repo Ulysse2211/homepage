@@ -58,6 +58,10 @@ const categories = [
     title: "IA & Autres",
     icons: [ClaudeIcon, GithubCopilot, Selenium, Blender, FontAwesome, Markdown, Toml, Json, Yaml, Oauth],
   },
+  {
+    title: "Sécurité",
+    icons: ["BinaryNinjaIcon.png", "BinwalkIcon.png", "dnSpyIcon.png", "FlashromIcon.png", "WiresharkIcon.png", "Zap.svg", "JDGuiIcon.png"],
+  }
 ];
 </script>
 
@@ -78,9 +82,11 @@ const categories = [
             <div
                 v-for="(icon, index) in category.icons"
                 :key="index"
-                class="flex items-center justify-center rounded-lg p-2 bg-transparent dark:bg-zinc-600 ring-black/5 dark:ring-white/10"
+                class="flex items-center justify-center p-2 bg-transparent dark:bg-zinc-600 ring-black/5 dark:ring-white/10"
+                style="border-radius: 10px;"
             >
-              <component :is="icon" size="32" />
+              <component v-if="typeof(icon) != 'string'" :is="icon" size="32" />
+              <img v-else :alt="icon" :src="'/skill-icons/' + icon" draggable="false" width="32" height="32" />
             </div>
           </div>
         </div>
