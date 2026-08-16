@@ -78,7 +78,7 @@ const categories = [
             <div
                 v-for="(icon, index) in category.icons"
                 :key="index"
-                class="flex items-center justify-center rounded-lg p-2 bg-transparent dark:bg-zinc-800 ring-black/5 dark:ring-white/10"
+                class="flex items-center justify-center rounded-lg p-2 bg-transparent dark:bg-zinc-600 ring-black/5 dark:ring-white/10"
             >
               <component :is="icon" size="32" />
             </div>
