@@ -98,6 +98,15 @@ onUnmounted(() => {
 
         <NavigationMenuItem>
           <NavigationMenuLink as-child :class="navigationMenuTriggerStyle()">
+            <NuxtLink to="/#skills" class="flex items-center gap-2" @click="scrollToId('skills')">
+              <IconCode class="size-4" />
+              Compétences
+            </NuxtLink>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+
+        <NavigationMenuItem>
+          <NavigationMenuLink as-child :class="navigationMenuTriggerStyle()">
             <NuxtLink to="/#history" class="flex items-center gap-2" @click="scrollToId('history')">
               <IconBriefcase class="size-4" />
               Parcours
@@ -110,15 +119,6 @@ onUnmounted(() => {
             <NuxtLink to="/#hardware" class="flex items-center gap-2" @click="scrollToId('hardware')">
               <IconDeviceLaptop class="size-4" />
               Matériel
-            </NuxtLink>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-
-        <NavigationMenuItem>
-          <NavigationMenuLink as-child :class="navigationMenuTriggerStyle()">
-            <NuxtLink to="/#skills" class="flex items-center gap-2" @click="scrollToId('skills')">
-              <IconCode class="size-4" />
-              Compétences
             </NuxtLink>
           </NavigationMenuLink>
         </NavigationMenuItem>
